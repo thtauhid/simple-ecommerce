@@ -1,6 +1,7 @@
 import React from 'react'
-import "./App.css"
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
+import "./App.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import Navbar from './components/Navbar'
@@ -14,10 +15,18 @@ import Default from './components/Default'
 function App() {
     return (
         <div className="App">
-      <React.Fragment>
-      	<Navbar />
-      </React.Fragment>
-    </div>
+		    <React.Fragment>
+		      	<Navbar />
+		      		<Router>
+			      		<Switch>
+			      			<Route path="/" exact component={ProductList} />
+			      			<Route path="/details" component={Details} />
+			      			<Route path="/cart" component={Cart} />
+			      			<Route component={Default} />
+			      		</Switch>
+		      		</Router>
+		    </React.Fragment>
+    	</div>
     );
 }
 
