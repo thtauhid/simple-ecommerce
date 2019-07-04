@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import logo from '../logo.svg'
+
 export default class Navbar extends Component {
     render() {
         return (
@@ -19,7 +20,7 @@ export default class Navbar extends Component {
        				</ul>
        				<Link to="/cart" className="ml-auto">
        					<button className="btn btn-primary">
-       						<i className="fas fa-cart-plus"></i>
+       						<i className="fas fa-cart-plus"></i> Cart
        					</button>
        				</Link>
        			</nav>	
